@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
@@ -8,8 +9,11 @@ public class GameControl : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Time.timeScale = 0;
-            Debug.Log("Lose!");
+            Invoke(nameof(RestartGame), 5);
         }
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }

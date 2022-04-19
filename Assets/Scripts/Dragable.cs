@@ -8,7 +8,7 @@ public class Dragable : MonoBehaviour
     bool draged = false;
 
     float timer = 0;
-    public float lifeSpan = 5;
+    public float lifeSpan;
 
     private void Update()
     {

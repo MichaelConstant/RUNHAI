@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    Rigidbody rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     void Update()
     {
-        GetComponent<Rigidbody>().velocity = Vector3.right;
+        rb.velocity = new Vector3(1, rb.velocity.y, rb.velocity.z);
     }
 }

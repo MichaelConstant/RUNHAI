@@ -27,7 +27,7 @@ public class Dragable : MonoBehaviour
         {
             canDrag = false;
         }
-        if (!canDrag)
+        if (draged)
         {
             timer += Time.deltaTime;
         }

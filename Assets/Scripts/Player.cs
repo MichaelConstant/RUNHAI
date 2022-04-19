@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector3(1, rb.velocity.y, rb.velocity.z);
-        length.text = (Mathf.RoundToInt(transform.position.x)).ToString();
+        length.text = "Length: "+(Mathf.RoundToInt(transform.position.x)).ToString();
     }
     private void OnCollisionEnter(Collision collision)
     {

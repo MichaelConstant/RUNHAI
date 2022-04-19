@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33bcca9bcc401644867ac51c168f9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeSpan: 5
 --- !u!54 &65121911
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -173,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33bcca9bcc401644867ac51c168f9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeSpan: 5
 --- !u!54 &86378049
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -938,6 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33bcca9bcc401644867ac51c168f9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeSpan: 5
 --- !u!54 &1587095948
 Rigidbody:
   m_ObjectHideFlags: 0

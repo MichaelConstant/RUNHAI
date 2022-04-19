@@ -6,6 +6,10 @@ public class Dragable : MonoBehaviour
 {
     bool canDrag = true;
     bool draged = false;
+
+    float timer = 0;
+    public float lifeSpan = 5;
+
     private void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -22,6 +26,14 @@ public class Dragable : MonoBehaviour
         if (draged && Input.GetMouseButtonUp(0))
         {
             canDrag = false;
+        }
+        if (!canDrag)
+        {
+            timer += Time.deltaTime;
+        }
+        if (timer >= lifeSpan)
+        {
+            Destroy(gameObject);
         }
     }
 }

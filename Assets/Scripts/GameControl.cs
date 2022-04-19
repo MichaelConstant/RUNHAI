@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameControl : MonoBehaviour
 {
     public GameObject player;
-    public GameObject WinUI;
-    public GameObject LoseUI;
+    public GameObject EndUI;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            EndUI.SetActive(true);
             Invoke(nameof(RestartGame), 5);
         }
     }

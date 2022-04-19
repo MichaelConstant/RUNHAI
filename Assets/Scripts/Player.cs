@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     Rigidbody rb;
     public Text length;
+    public AudioSource click;
 
     private void Start()
     {
@@ -17,5 +18,9 @@ public class Player : MonoBehaviour
     {
         rb.velocity = new Vector3(1, rb.velocity.y, rb.velocity.z);
         length.text = (Mathf.RoundToInt(transform.position.x)).ToString();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        click.Play();
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -22,5 +23,11 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         click.Play();
+    }
+
+    public void RestartGame()
+    {
+        rb.velocity = Vector3.zero;
+        SceneManager.LoadScene(0);
     }
 }

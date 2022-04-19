@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject WinUI;
+    public GameObject LoseUI;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -14,6 +17,6 @@ public class GameControl : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene(0);
+        player.GetComponent<Player>().RestartGame();
     }
 }

@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
 {
     Rigidbody rb;
     public Text length;
+    public Text EndLength;
     public AudioSource click;
+    public bool canWalk = true;
 
     private void Start()
     {
@@ -17,8 +19,12 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        rb.velocity = new Vector3(1, rb.velocity.y, rb.velocity.z);
+        if (canWalk)
+        {
+            rb.velocity = new Vector3(1, rb.velocity.y, rb.velocity.z);
+        }
         length.text = "Length: "+(Mathf.RoundToInt(transform.position.x)).ToString();
+        EndLength.text = "Game Over!\n\nYou Walked " + (Mathf.RoundToInt(transform.position.x)).ToString() + " Meters\nTry Harder Next Time?";
     }
     private void OnCollisionEnter(Collision collision)
     {

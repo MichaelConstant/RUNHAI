@@ -12,6 +12,8 @@ public class GameControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             EndUI.SetActive(true);
+            player.GetComponent<Player>().canWalk = false;
+            player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             Invoke(nameof(RestartGame), 5);
         }
     }

@@ -5789,8 +5789,8 @@ Transform:
   - {fileID: 1636170209}
   - {fileID: 203550930}
   - {fileID: 80960923}
-  - {fileID: 922943716}
   - {fileID: 153832272}
+  - {fileID: 922943716}
   - {fileID: 236594380}
   - {fileID: 1894557514}
   - {fileID: 1756151175}
@@ -5799,9 +5799,9 @@ Transform:
   - {fileID: 1962359890}
   - {fileID: 1924981318}
   - {fileID: 1747256277}
+  - {fileID: 415461783}
   - {fileID: 261820377}
   - {fileID: 1345916498}
-  - {fileID: 415461783}
   - {fileID: 868416251}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -10804,6 +10804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   length: {fileID: 1073950451}
+  EndLength: {fileID: 1961248597}
   click: {fileID: 479461254}
 --- !u!54 &1424807963
 Rigidbody:
@@ -14320,12 +14321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Game Over!
-
-
-    Try Harder Next Time?
-
-'
+  m_Text: "Game Over!\n\nYou Walked \nTry Harder Next Time?\n"
 --- !u!222 &1961248598
 CanvasRenderer:
   m_ObjectHideFlags: 0
